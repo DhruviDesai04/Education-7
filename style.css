@@ -1,0 +1,780 @@
+ :root {
+     --color: #4d638f;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     top: 0;
+     left: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+     outline: none;
+     border: none;
+     transition: all .2s linear;
+     font-family: 'Montserrat',
+         sans-serif;
+ }
+
+ ::selection {
+     background: var(--color);
+     color: #1B2A49;
+ }
+
+ html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+ }
+
+ body {
+     background: #E0F3F6;
+     overflow-x: hidden;
+     padding-left: 35em;
+ }
+
+ section {
+     min-height: 100vh;
+     padding: 1rem;
+ }
+
+ .heading {
+     text-align: center;
+     margin: 0 20px;
+     font-size: 40px;
+     padding: 50px;
+     border-bottom: .1rem solid #1B2A49;
+     color: #1B2A49;
+     font-weight: 600;
+ }
+
+ .heading span {
+     color: var(--color);
+     font-weight: 600;
+ }
+
+
+
+
+ /* ScrollBar */
+
+ html::-webkit-scrollbar {
+     width: 1.4em;
+ }
+
+ html::-webkit-scrollbar-track {
+     background-color: #1B2A49;
+ }
+
+ html::-webkit-scrollbar-thumb {
+     background: var(--color);
+     height: 11px;
+ }
+
+ html::-webkit-scrollbar-thumb:hover {
+     background-color: #b5c0d6;
+ }
+
+
+ /* Left View */
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     height: 100%;
+     width: 35rem;
+     background: #F6F6F6;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-flow: column;
+     text-align: center;
+ }
+
+
+
+ header img {
+     height: auto;
+     width: 50%;
+     border: 5px solid var(--color);
+     border-radius: 50%;
+     object-fit: cover;
+     box-shadow: inset 7px 7px 13px #b5c0d6,
+         inset -7px -7px 13px #b5c0d6,
+         2px 2px 5px #b5c0d6,
+         -2px -2px 5px #b5c0d6;
+     ;
+ }
+
+ header h3 {
+     font-size: 30px;
+     padding: 20px 0;
+     color: #1B2A49;
+ }
+
+ header .navbar {
+     width: 100%;
+ }
+
+ .navbar ul {
+     list-style: none;
+     padding: 10px 20px;
+ }
+
+ header .navbar ul li a {
+     display: block;
+     padding: 10px;
+     margin: 15px 0;
+     background-color: #1B2A49;
+     color: #dfe7e9;
+     font-size: 20px;
+     border-radius: 10px;
+     box-shadow: 2px 2px 5px #4d638f,
+         -2px -2px 5px #b5c0d6;
+ }
+
+ .navbar ul li a:hover {
+     background: var(--color);
+ }
+
+
+ /* for menu  icon */
+ #menu {
+     position: fixed;
+     top: 0;
+     right: 0;
+     background: #1B2A49;
+     color: #dfe7e9;
+     font-size: 30px;
+     padding: 20px;
+     width: 70px;
+     z-index: 1000;
+     display: none;
+ }
+
+
+ /* about section */
+ .about .info {
+     display: flex;
+     flex-direction: row;
+
+ }
+
+ .about .info .left,
+ .about .info .right {
+     justify-content: center;
+     margin: 0 auto;
+     padding: 50px 10px;
+ }
+
+
+ .about .info .right {
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     margin: 0 auto;
+ }
+
+ .about .info h3 {
+     font-size: 20px;
+     color: var(--color);
+     padding: 15px 0;
+     font-weight: normal;
+     line-height: 1.5;
+ }
+
+ .about .info h3 span {
+     font-weight: bold;
+     color: #1B2A49;
+ }
+
+ .btn {
+     padding: 15px;
+     background-color: #1B2A49;
+     color: #dfe7e9;
+     cursor: pointer;
+     font-size: 20px;
+     border-radius: 10px;
+     box-shadow: 2px 2px 5px #4d638f,
+         -2px -2px 5px #b5c0d6;
+ }
+
+ .btn:hover {
+     background: var(--color);
+ }
+
+
+ /* Projects section */
+ .project-heading {
+     font-size: 23px;
+     color: #1B2A49;
+     text-align: center;
+     margin: 40px 0;
+ }
+
+ .createForm {
+     width: 50%;
+     height: auto;
+     border-radius: 10px;
+     padding: 40px 30px;
+     box-shadow: -3px -3px 7px #ffffff73,
+         2px 2px 5px rgba(94, 104, 121, 0.288);
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     margin: 0 auto 70px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .createForm .field {
+     height: 50px;
+     width: 100%;
+     display: flex;
+     position: relative;
+ }
+
+ .field input,
+ .field textarea {
+     height: 100%;
+     width: 100%;
+     padding-left: 50px;
+     font-size: 18px;
+     outline: none;
+     border: none;
+     color: #1B2A49;
+     background: #dfe7e9;
+     border-radius: 25px;
+     box-shadow: inset 2px 2px 5px #babecc,
+         inset -5px -5px 10px #ffffff73;
+ }
+
+ .field input::placeholder,
+ .field textarea::placeholder {
+     color: #1B2A49;
+     opacity: 0.65;
+ }
+
+ .field .description {
+     display: flex;
+     margin: 0 auto;
+     line-height: 50px;
+ }
+
+ .field input:focus~label,
+ .field textarea:focus~label {
+     box-shadow: inset 2px 2px 5px #babecc,
+         inset -1px -1px 2px #ffffff73;
+     opacity: 0;
+ }
+
+ .createForm .field {
+     margin-top: 20px;
+ }
+
+ .createForm .field span {
+     position: absolute;
+     width: 50px;
+     height: auto;
+     line-height: 50px;
+     color: #1B2A49;
+     font-size: 15px;
+ }
+
+
+
+ .createForm .chooseFile::-webkit-file-upload-button {
+     visibility: hidden;
+ }
+
+ .createForm .chooseFile::before {
+     content: 'Add Image';
+     font-size: 18px;
+     outline: none;
+     border: none;
+     color: #1B2A49;
+     background: #dfe7e9;
+     opacity: 0.65;
+     text-align: center;
+     line-height: 50px;
+     outline: none;
+     white-space: nowrap;
+ }
+
+ .createForm button {
+     margin: 50px 0 0 0;
+     width: 30%;
+     height: 50px;
+     background: #1B2A49;
+     color: #dfe7e9;
+     font-size: 18px;
+     font-weight: 600;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     border-radius: 10px;
+     box-shadow: 2px 2px 5px #4d638f,
+         -5px -5px 10px #b5c0d6;
+ }
+
+ .createForm button:focus {
+     color: #b5c0d6;
+     box-shadow: inset 2px 2px 5px #4d638f,
+         inset -2px -2px 5px #b5c0d6;
+ }
+
+
+
+ .cards {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     display: flex;
+     flex-wrap: wrap;
+     margin: 0 auto;
+     color: #1B2A49;
+ }
+
+ .card {
+     width: 270px;
+     margin: 20px 30px;
+     padding: 20px 10px;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: #F6F6F6;
+     opacity: 0.8;
+     border-radius: 10px;
+     box-shadow: inset 3px 3px 6px #fff,
+         inset -3px -3px 6px #fff;
+ }
+
+ .card h3 {
+     font-size: 30px;
+ }
+
+ .card p {
+     font-size: 18px;
+     margin: 10px 0;
+ }
+
+ .card img {
+     width: 50%;
+     height: auto;
+     margin: 20px;
+     border-radius: 50%;
+     box-shadow: 3px 3px 6px #fff,
+         -3px -3px 6px #fff;
+ }
+
+
+ /* Profile Views */
+
+ .companies {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .view {
+     display: flex;
+     flex-direction: row;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     margin: 20px 50px;
+     border-radius: 50px;
+     box-shadow: inset 3px 3px 6px #fff,
+         inset -3px -3px 6px #fff;
+ }
+
+ .view img {
+     width: 110px;
+     height: auto;
+     margin: 10px 30px;
+     border-radius: 10%;
+     box-shadow: 3px 3px 6px #fff,
+         -3px -3px 6px #fff;
+ }
+
+ .view h3 {
+     font-size: 20px;
+     font-weight: 500;
+     margin: 70px;
+     color: var(--color);
+ }
+
+ .view p {
+     font-size: 15px;
+     color: var(--color);
+ }
+
+ /* media queries */
+
+ @media only screen and (max-width:1250px) {
+     .heading {
+         padding: 40px;
+     }
+
+     .heading,
+     .title {
+         font-size: 30px;
+     }
+
+     .createForm {
+         width: 80%;
+     }
+
+     .card {
+         width: 250px;
+     }
+
+     .card h3 {
+         font-size: 25px;
+     }
+
+     .card img {
+         width: 45%;
+     }
+
+     .card p {
+         font-size: 15px;
+     }
+
+     .view h3,
+     .about .info h3,
+     header .navbar ul li a,
+     .btn {
+         font-size: 17px;
+     }
+
+     .project-heading {
+         font-size: 20px;
+     }
+
+     .view p {
+         font-size: 12px;
+     }
+
+     .view h3 {
+         margin: 60px;
+     }
+
+     .view img {
+         width: 100px;
+     }
+ }
+
+ @media only screen and (max-width:992px) {
+     header {
+         left: -120%;
+     }
+
+     #menu {
+         display: block;
+     }
+
+     header.toggle {
+         left: 0%;
+     }
+
+     body {
+         padding: 0;
+     }
+
+     .heading,
+     .title {
+         font-size: 25px;
+     }
+
+     .heading {
+         padding: 30px;
+     }
+
+
+     .card {
+         width: 225px;
+     }
+
+     .view img {
+         width: 90px;
+     }
+
+     .view h3 {
+         margin: 50px;
+     }
+
+ }
+
+ @media only screen and (max-width:768px) {
+     .heading {
+         padding: 25px;
+     }
+
+     .heading,
+     .title {
+         font-size: 20px;
+     }
+
+
+     .view h3,
+     .about .info h3,
+     header .navbar ul li a,
+     .btn {
+         font-size: 15px;
+     }
+
+     .btn {
+         padding: 10px;
+     }
+
+     .card {
+         width: 200px;
+     }
+
+     .card h3 {
+         font-size: 20px;
+     }
+
+     .card p {
+         font-size: 12px;
+     }
+
+     .project-heading {
+         margin: 30px 0;
+         font-size: 17px;
+     }
+
+     .createForm .field {
+         height: 40px;
+     }
+
+     .field input,
+     .field textarea,
+     .createForm .chooseFile::before {
+         font-size: 15px;
+     }
+
+     .createForm .chooseFile::before,
+     .field .description {
+         line-height: 40px;
+     }
+
+     .createForm .field span {
+         font-size: 12px;
+         line-height: 40px;
+     }
+
+     .createForm button {
+         height: 40px;
+         font-size: 15px;
+     }
+
+     .view img {
+         width: 80px;
+     }
+
+     .view h3 {
+         margin: 50px;
+     }
+
+     header {
+         width: 25rem;
+     }
+
+     #menu {
+         font-size: 25px;
+         padding: 15px;
+         width: 60px;
+     }
+ }
+
+ @media only screen and (max-width: 600px) {
+     .heading {
+         padding: 20px;
+     }
+
+     .heading,
+     .title {
+         font-size: 15px;
+     }
+
+     .card {
+         width: 150px;
+     }
+
+     .card h3 {
+         font-size: 17px;
+     }
+
+     .card p,
+     .view p {
+         font-size: 10px;
+     }
+
+     .view h3,
+     .about .info h3,
+     header .navbar ul li a,
+     .btn {
+         font-size: 13px;
+     }
+
+     .view {
+         margin: 20px 30px;
+     }
+
+     .createForm {
+         width: 90%;
+     }
+
+     .project-heading {
+         margin: 20px 0;
+         font-size: 12px;
+     }
+
+     .createForm .field {
+         height: 30px;
+     }
+
+     .field input,
+     .field textarea,
+     .createForm .chooseFile::before {
+         font-size: 10px;
+     }
+
+     .createForm .chooseFile::before,
+     .field .description {
+         line-height: 30px;
+     }
+
+     .createForm .field span {
+         font-size: 10px;
+         line-height: 30px;
+     }
+
+     .createForm button {
+         height: 30px;
+         font-size: 12px;
+     }
+
+     .view h3 {
+         margin: 30px;
+     }
+
+     .view img {
+         width: 50px;
+     }
+
+     #menu {
+         font-size: 20px;
+         padding: 10px;
+         width: 40px;
+     }
+ }
+
+ @media only screen and (max-width: 420px) {
+     .createForm {
+         width: 99%;
+     }
+
+     .project-heading {
+         margin: 10px 0;
+     }
+
+     .createForm .field {
+         height: 20px;
+     }
+
+     .field input,
+     .field textarea {
+         padding-left: 30px;
+     }
+
+     .field input,
+     .field textarea,
+     .createForm .chooseFile::before {
+         font-size: 7px;
+     }
+
+     .createForm .chooseFile::before,
+     .field .description {
+         line-height: 20px;
+     }
+
+     .createForm .field span {
+         font-size: 8px;
+         line-height: 20px;
+         width: 30px;
+     }
+
+     .createForm button {
+         height: 25px;
+         font-size: 10px;
+     }
+
+     .view h3 {
+         font-size: 10px;
+         margin: 10px;
+     }
+
+     .view img {
+         width: 40px;
+         margin: 15px;
+     }
+
+     .view p {
+         font-size: 8px;
+     }
+
+     .view {
+         margin: 20px 10px;
+     }
+
+     header {
+         width: 20rem;
+     }
+
+     #menu {
+         font-size: 15px;
+         padding: 7px;
+         width: 30px;
+     }
+
+     .about .info {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .about .info .left,
+     .about .info .right {
+         padding: 20px;
+     }
+
+
+ }
+
+ /* animation */
+
+ .glowIn span {
+     animation: glow-in 5s both infinite;
+ }
+
+
+ @keyframes glow-in {
+     from {
+         opacity: 0;
+     }
+
+     65% {
+         opacity: 1;
+         text-shadow: 2px 2px 50px #1B2A49;
+     }
+
+     75% {
+         opacity: 1;
+     }
+
+     to {
+         opacity: 0.8;
+     }
+ }

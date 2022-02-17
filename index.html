@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="user">
+        <img src="images/main-img.png" alt="" />
+        <h3 class="title">Company Dashboard</h3>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#views">Views</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="menu" class="fa fa-bars"></div>
+
+    <section class="about" id="about">
+      <h1 class="heading glowIn">Your<span> Profile</span></h1>
+
+      <div class="info">
+        <div class="left">
+          <h3><span>Name : </span><br />abcdef ghijkl</h3>
+          <h3><span>Email : </span><br />abc@example.com</h3>
+          <h3><span>Password : </span><br />*********</h3>
+        </div>
+        <div class="right">
+          <button class="btn">
+            Edit Profile <i class="fas fa-user-edit"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h1 class="heading glowIn">Your <span>Projects </span></h1>
+      <h3 class="project-heading">Create a New Project</h3>
+      <div class="createForm">
+        <div class="field">
+          <span class="fas fa-user"></span>
+          <input type="text" placeholder="Project Name" />
+        </div>
+        <div class="field">
+          <span class="fas fa-upload"></span>
+          <input type="file" class="chooseFile" />
+        </div>
+        <div class="field">
+          <span class="fas fa-pen"></span>
+          <textarea
+            class="description"
+            name="description"
+            cols="30"
+            rows="10"
+            placeholder="Description"
+          ></textarea>
+        </div>
+        <button>Done</button>
+      </div>
+      <h3 class="project-heading">Your Previous Projects</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Project 1</h3>
+          <img src="images/main-img.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste beatae
+            molestiae neque soluta perferendis autem?
+          </p>
+        </div>
+        <div class="card">
+          <h3>Project 2</h3>
+          <img src="images/main-img.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste beatae
+            molestiae neque soluta perferendis autem?
+          </p>
+        </div>
+        <div class="card">
+          <h3>Project 3</h3>
+          <img src="images/main-img.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste beatae
+            molestiae neque soluta perferendis autem?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="views" id="views">
+      <h1 class="heading glowIn">Profile<span> Views</span></h1>
+      <h3 class="project-heading">
+        Interns who viewed/downloaded Your Projects
+      </h3>
+      <div class="companies">
+        <div class="view">
+          <img src="images/main-img.png" alt="" />
+          <h3>Intern-1</h3>
+          <p>3 Days ago</p>
+        </div>
+        <div class="view">
+          <img src="images/main-img.png" alt="" />
+          <h3>Intern-2</h3>
+          <p>3 Days ago</p>
+        </div>
+        <div class="view">
+          <img src="images/main-img.png" alt="" />
+          <h3>Intern-3</h3>
+          <p>3 Days ago</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
